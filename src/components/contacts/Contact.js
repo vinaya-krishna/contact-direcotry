@@ -25,7 +25,7 @@ class Contact extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <div className="card card-body">
+            <div className="card card-body mb-3">
               <h4>
                 {name}
                 <i

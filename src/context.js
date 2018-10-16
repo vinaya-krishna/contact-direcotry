@@ -7,10 +7,17 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "DELETE_FIELD":
       return {
+        ...state,
         contacts: state.contacts.filter(
           contact => contact.id !== action.payload
         )
       };
+    case "ADD_FIELD":
+      return {
+        ...state,
+        contacts: [action.payload, ...state.contacts]
+      };
+
     default:
       return state;
   }
